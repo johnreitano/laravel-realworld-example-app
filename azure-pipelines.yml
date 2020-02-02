@@ -12,7 +12,7 @@ variables:
   azureSubscription: 'f6bbda9d-8748-4ae0-8616-1d5595706e52'
   
   # Web app name
-  webAppName: ''
+  webAppName: 'laravel-realworld-example-app'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
