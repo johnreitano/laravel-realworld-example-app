@@ -83,7 +83,7 @@ stages:
     
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
-      artifact: drop
+      artifact: laravel-realworld-example-app
 
 - stage: Deploy
   displayName: 'Deploy Web App'
