@@ -103,11 +103,9 @@ stages:
               ls -l $(Pipeline.Workspace)
               echo "webAppName=$(webAppName)"
               ls -l $(Pipeline.Workspace)/$(webAppName)        
-              echo "environmentName=$(environmentName)"
-              ls -l $(Pipeline.Workspace)/$(environmentName)        
-#           - task: AzureWebApp@1
-#             displayName: 'Deploy Azure Web App : '
-#             inputs:
-#               azureSubscription: $(azureSubscription)
-#               appName: $(webAppName)
-#               package: $(Pipeline.Workspace)/$(webAppName)/$(Build.BuildId).zip
+          - task: AzureWebApp@1
+            displayName: 'Deploy Azure Web App : '
+            inputs:
+              azureSubscription: $(azureSubscription)
+              appName: $(webAppName)
+              package: $(Pipeline.Workspace)/$(webAppName)/$(Build.BuildId).zip
